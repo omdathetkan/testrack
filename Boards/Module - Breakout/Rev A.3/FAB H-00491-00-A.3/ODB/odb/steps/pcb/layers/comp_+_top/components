@@ -1,0 +1,518 @@
+#
+#Component attribute names
+#
+@0 .comp_mount_type
+@1 .comp_height
+
+# CMP 0
+CMP 4 0.15 -1.4200787 0 N MP11 5151094F ;0=2,1=0.3598
+PRP Optoelectronic_Device_Type 'OPTICAL PIPE'
+PRP REACH_SVHC 'Yes'
+PRP RoHS_Compliant 'Yes'
+TOP 0 0.25 -1.3598425 0 N 0 15 MP11-1
+TOP 1 0.35 -1.3598425 0 N 0 16 MP11-2
+#
+# CMP 1
+CMP 11 0.35 -1.6 90 N R13 CRCW06034K70FKEA ;0=1,1=0.0217
+PRP Case/Package '0603 (1608)'
+PRP Failure_Rate 'N/A'
+PRP Mount 'Surface Mount'
+PRP Pins '2'
+PRP Qualification 'Automotive'
+PRP Rated_Current ''
+PRP Rated_Power '100mW'
+PRP Rated_Voltage '75V'
+PRP RoHS 'Yes'
+PRP Termination_Finish 'Pure tin solder contacts on Ni barrier layer'
+PRP Tolerance '1%'
+PRP Type 'Standard Thick Film'
+PRP Value '4,7k'
+TOP 0 0.35 -1.5694882 270 N 1 3 R13-1
+TOP 1 0.35 -1.6305118 90 N 24 35 R13-2
+#
+# CMP 2
+CMP 11 0.45 -1.6 90 N R12 CRCW06034K70FKEA ;0=1,1=0.0217
+PRP Case/Package '0603 (1608)'
+PRP Failure_Rate 'N/A'
+PRP Mount 'Surface Mount'
+PRP Pins '2'
+PRP Qualification 'Automotive'
+PRP Rated_Current ''
+PRP Rated_Power '100mW'
+PRP Rated_Voltage '75V'
+PRP RoHS 'Yes'
+PRP Termination_Finish 'Pure tin solder contacts on Ni barrier layer'
+PRP Tolerance '1%'
+PRP Type 'Standard Thick Film'
+PRP Value '4,7k'
+TOP 0 0.45 -1.5694882 270 N 2 3 R12-1
+TOP 1 0.45 -1.6305118 90 N 24 34 R12-2
+#
+# CMP 3
+CMP 8 0.1500768 -1.4496736 270 N D11 SML-E12M8W ;0=1,1=0.0315
+PRP Case_Code_(Imperial) '0603'
+PRP Case_Code_(Metric) '1608'
+PRP Case/Package '0603'
+PRP Chip_Structure 'AlGaInP'
+PRP Color 'Yellowish green'
+PRP Dominant_Wavelength '630nm'
+PRP Forward_Current '20mA'
+PRP Forward_Voltage '2,4V'
+PRP Height '0.46mm'
+PRP Illumination_Colour 'Red'
+PRP Lead_Free 'Lead Free'
+PRP Length '1.6mm'
+PRP Lens_Colour 'White'
+PRP Lens_Style 'Clear, Colorless, Diffused, Rectangular'
+PRP Lens_Transparency 'Diffused'
+PRP Luminous_Intensity '25mcd'
+PRP Max_Operating_Temperature '85°C'
+PRP Min_Operating_Temperature '-40°C'
+PRP Mount 'Surface Mount'
+PRP Number_of_LEDs '1'
+PRP Number_of_Pins '2'
+PRP Package_Quantity '1'
+PRP Packaging 'Tape and Reel'
+PRP Radiation_Hardening 'No'
+PRP Test_Current '20mA'
+PRP Typical_Wavelength '572nm'
+PRP Viewing_Angle '140°'
+PRP Wavelength '630nm'
+PRP Width '0.8mm'
+TOP 0 0.1500768 -1.4171933 270 N 3 11 D11-A
+TOP 1 0.1500768 -1.4821539 90 N 1 2 D11-C
+#
+# CMP 4
+CMP 8 0.45 -1.45 270 N D10 SML-E12M8W ;0=1,1=0.0315
+PRP Case_Code_(Imperial) '0603'
+PRP Case_Code_(Metric) '1608'
+PRP Case/Package '0603'
+PRP Chip_Structure 'AlGaInP'
+PRP Color 'Yellowish green'
+PRP Dominant_Wavelength '630nm'
+PRP Forward_Current '20mA'
+PRP Forward_Voltage '2,4V'
+PRP Height '0.46mm'
+PRP Illumination_Colour 'Red'
+PRP Lead_Free 'Lead Free'
+PRP Length '1.6mm'
+PRP Lens_Colour 'White'
+PRP Lens_Style 'Clear, Colorless, Diffused, Rectangular'
+PRP Lens_Transparency 'Diffused'
+PRP Luminous_Intensity '25mcd'
+PRP Max_Operating_Temperature '85°C'
+PRP Min_Operating_Temperature '-40°C'
+PRP Mount 'Surface Mount'
+PRP Number_of_LEDs '1'
+PRP Number_of_Pins '2'
+PRP Package_Quantity '1'
+PRP Packaging 'Tape and Reel'
+PRP Radiation_Hardening 'No'
+PRP Test_Current '20mA'
+PRP Typical_Wavelength '572nm'
+PRP Viewing_Angle '140°'
+PRP Wavelength '630nm'
+PRP Width '0.8mm'
+TOP 0 0.45 -1.4175197 270 N 13 43 D10-A
+TOP 1 0.45 -1.4824803 90 N 2 2 D10-C
+#
+# CMP 5
+CMP 13 5.8070866 0 270 N U10 MCP23008-E/SS ;0=1,1=0.0787
+TOP 0 5.9431102 -0.1151575 0 N 26 9 U10-1
+TOP 1 5.9431102 -0.0895669 0 N 30 8 U10-2
+TOP 2 5.9431102 -0.0639764 0 N 13 35 U10-3
+TOP 3 5.9431102 -0.0383858 0 N 13 36 U10-4
+TOP 4 5.9431102 -0.0127953 0 N 13 37 U10-5
+TOP 5 5.9431102 0.0127953 0 N 13 38 U10-6
+TOP 6 5.9431102 0.0383858 0 N 0 3 U10-7
+TOP 7 5.9431102 0.0639764 0 N 0 4 U10-8
+TOP 8 5.9431102 0.0895669 0 N 24 28 U10-9
+TOP 9 5.9431102 0.1151575 0 N 0 5 U10-10
+TOP 10 5.671063 0.1151575 180 N 0 6 U10-11
+TOP 11 5.671063 0.0895669 180 N 10 2 U10-12
+TOP 12 5.671063 0.0639764 180 N 9 2 U10-13
+TOP 13 5.671063 0.0383858 180 N 8 2 U10-14
+TOP 14 5.671063 0.0127953 180 N 7 2 U10-15
+TOP 15 5.671063 -0.0127953 180 N 6 2 U10-16
+TOP 16 5.671063 -0.0383858 180 N 5 2 U10-17
+TOP 17 5.671063 -0.0639764 180 N 4 2 U10-18
+TOP 18 5.671063 -0.0895669 180 N 3 10 U10-19
+TOP 19 5.671063 -0.1151575 180 N 13 39 U10-20
+#
+# CMP 6
+CMP 2 5.6811024 0.2755906 270 N C10 C0603C104K5RACTU ;0=1,1=0.0343
+PRP Case/Package '0603 (1608)'
+PRP Dielectric 'X7R'
+PRP ESR ''
+PRP Failure_Rate 'N/A'
+PRP Mount 'Surface Mount'
+PRP Pins '2'
+PRP Qualification 'Standard'
+PRP Rated_Voltage '50V'
+PRP RoHS 'Yes'
+PRP Termination_Finish '100% Matte Sn'
+PRP Tolerance '10%'
+PRP Type 'Ceramic'
+PRP Value '100nF'
+TOP 0 5.6811024 0.246063 90 N 13 44 C10-1
+TOP 1 5.6811024 0.3051182 270 N 24 32 C10-2
+#
+# CMP 7
+CMP 1 5.8389764 -1.5499961 0 N L4 BLM21SP700SH1D ;0=1,1=0.0413
+PRP Case/Package '0805 (2012)'
+PRP Failure_Rate ''
+PRP Impedance '70'
+PRP Maximum_DC_Resistance '9m'
+PRP Qualification 'Automotive'
+PRP Rated_Current '6A'
+PRP Termination_Finish 'Tin'
+PRP Tolerance '25%'
+TOP 0 5.8049213 -1.5499961 180 N 14 5 L4-1
+TOP 1 5.8730315 -1.5499961 0 N 11 2 L4-2
+#
+# CMP 8
+CMP 1 5.8389764 -1.4499961 0 N L3 BLM21SP700SH1D ;0=1,1=0.0413
+PRP Case/Package '0805 (2012)'
+PRP Failure_Rate ''
+PRP Impedance '70'
+PRP Maximum_DC_Resistance '9m'
+PRP Qualification 'Automotive'
+PRP Rated_Current '6A'
+PRP Termination_Finish 'Tin'
+PRP Tolerance '25%'
+TOP 0 5.8049213 -1.4499961 180 N 15 5 L3-1
+TOP 1 5.8730315 -1.4499961 0 N 12 2 L3-2
+#
+# CMP 9
+CMP 3 5.8389764 -1.6499961 180 N C5 C0805C474K5RACTU ;0=1,1=0.0433
+PRP Case/Package '0805 (2012)'
+PRP Dielectric 'X7R'
+PRP ESR ''
+PRP Failure_Rate 'N/A'
+PRP Mount 'Surface Mount'
+PRP Pins '2'
+PRP Qualification 'Standard'
+PRP Rated_Voltage '50V'
+PRP RoHS 'Yes'
+PRP Termination_Finish '100% Matte Sn'
+PRP Tolerance '10%'
+PRP Type 'Ceramic'
+PRP Value '470nF'
+TOP 0 5.872441 -1.6499961 0 N 24 27 C5-1
+TOP 1 5.8055118 -1.6499961 180 N 14 4 C5-2
+#
+# CMP 10
+CMP 3 5.8389764 -1.3499961 180 N C4 C0805C474K5RACTU ;0=1,1=0.0433
+PRP Case/Package '0805 (2012)'
+PRP Dielectric 'X7R'
+PRP ESR ''
+PRP Failure_Rate 'N/A'
+PRP Mount 'Surface Mount'
+PRP Pins '2'
+PRP Qualification 'Standard'
+PRP Rated_Voltage '50V'
+PRP RoHS 'Yes'
+PRP Termination_Finish '100% Matte Sn'
+PRP Tolerance '10%'
+PRP Type 'Ceramic'
+PRP Value '470nF'
+TOP 0 5.872441 -1.3499961 0 N 24 26 C4-1
+TOP 1 5.8055118 -1.3499961 180 N 15 4 C4-2
+#
+# CMP 11
+CMP 9 5.9547244 1.515748 90 N J10 67643-3910 ;0=2,1=0.3248
+PRP Contact_Plating ''
+PRP Contact_Resistance '30m'
+PRP Gender ''
+PRP Mount 'Board'
+PRP Orientation ''
+PRP Pins ''
+PRP Pitch ''
+PRP Qualification ''
+PRP Rated_Current ''
+PRP Rated_Voltage ''
+PRP RoHS 'Yes'
+PRP Termination_Finish ''
+TOP 0 6.1905512 1.6535433 90 N 13 48 J10-1
+TOP 1 6.1905512 1.5551181 90 N 27 3 J10-2
+TOP 2 6.1905512 1.4763779 90 N 31 3 J10-3
+TOP 3 6.1905512 1.3779527 90 N 24 39 J10-4
+TOP 4 6.0838583 1.7744094 90 N 16 103 J10-M1
+TOP 5 6.0838583 1.2570866 90 N 16 104 J10-M2
+#
+# CMP 12
+CMP 14 5.8070866 0.2755906 270 N U11 24AA025E64T-I/OT ;0=1,1=0.0571
+PRP JESD-609_Code 'e3'
+PRP Memory_Size ''
+PRP Memory_Type 'EEPROM'
+PRP Moisture_Sensitivity_Level '1'
+PRP Peak_Reflow_Temperature_(Cel) '260°C'
+PRP Serial_Bus_Type 'I2C'
+PRP Terminal_Finish 'Tin'
+PRP Time_@_Peak_Reflow_Temperature-Max_(s) '40s'
+TOP 0 5.8622047 0.238189 0 N 26 10 U11-1
+TOP 1 5.8622047 0.2755906 0 N 24 29 U11-2
+TOP 2 5.8622047 0.3129922 0 N 30 9 U11-3
+TOP 3 5.7519685 0.3129922 180 N 13 40 U11-4
+TOP 4 5.7519685 0.2755906 180 N 13 41 U11-5
+TOP 5 5.7519685 0.238189 180 N 13 42 U11-6
+#
+# CMP 13
+CMP 11 5.9657875 0.3129922 180 N R11 CRCW06034K70FKEA ;0=1,1=0.0217
+PRP Case/Package '0603 (1608)'
+PRP Failure_Rate 'N/A'
+PRP Mount 'Surface Mount'
+PRP Pins '2'
+PRP Qualification 'Automotive'
+PRP Rated_Current ''
+PRP Rated_Power '100mW'
+PRP Rated_Voltage '75V'
+PRP RoHS 'Yes'
+PRP Termination_Finish 'Pure tin solder contacts on Ni barrier layer'
+PRP Tolerance '1%'
+PRP Type 'Standard Thick Film'
+PRP Value '4,7k'
+TOP 0 5.9962993 0.3129922 0 N 13 47 R11-1
+TOP 1 5.9352757 0.3129922 180 N 30 10 R11-2
+#
+# CMP 14
+CMP 11 5.9657875 0.238189 180 N R10 CRCW06034K70FKEA ;0=1,1=0.0217
+PRP Case/Package '0603 (1608)'
+PRP Failure_Rate 'N/A'
+PRP Mount 'Surface Mount'
+PRP Pins '2'
+PRP Qualification 'Automotive'
+PRP Rated_Current ''
+PRP Rated_Power '100mW'
+PRP Rated_Voltage '75V'
+PRP RoHS 'Yes'
+PRP Termination_Finish 'Pure tin solder contacts on Ni barrier layer'
+PRP Tolerance '1%'
+PRP Type 'Standard Thick Film'
+PRP Value '4,7k'
+TOP 0 5.9962993 0.238189 0 N 13 46 R10-1
+TOP 1 5.9352757 0.238189 180 N 26 11 R10-2
+#
+# CMP 15
+CMP 0 5.984252 0.8267717 270 N J11 RJHSE5E80 ;0=2,1=0.5449
+PRP Color 'Black'
+PRP Connector_Type 'Jack'
+PRP Contact_Material 'Bronze'
+PRP Contact_Plating 'Gold'
+PRP Contact_Resistance ''
+PRP Current_Rating '1.5A'
+PRP Direction 'Up'
+PRP Flammability_Rating 'UL94 V-0'
+PRP Gender 'Female'
+PRP Housing_Material 'Thermoplastic'
+PRP Insulation_Resistance '500MR'
+PRP Max_Operating_Temperature '85°C'
+PRP Min_Operating_Temperature '-55°C'
+PRP Mount 'Through Hole'
+PRP Number_of_Contacts '8'
+PRP Number_of_Ports '1'
+PRP Number_of_Positions '8'
+PRP Number_of_Rows '1'
+PRP Orientation 'Right Angle'
+PRP Package_Quantity '120'
+PRP Packaging 'Tray'
+PRP Pins ''
+PRP Pitch '2.03mm'
+PRP Qualification ''
+PRP Rated_Current ''
+PRP Rated_Voltage ''
+PRP RoHS 'Yes'
+PRP Shielding 'Shielded'
+PRP Termination 'Solder'
+PRP Termination_Finish ''
+PRP Voltage_Rating '125V'
+TOP 0 5.9915355 0.6870079 90 N 28 2 J11-1
+TOP 1 6.0616142 0.7271654 270 N 32 2 J11-2
+TOP 2 5.9915355 0.7669292 270 N 29 1 J11-3
+TOP 3 6.0616142 0.8070867 270 N 0 7 J11-4
+TOP 4 5.9915355 0.8468504 270 N 0 8 J11-5
+TOP 5 6.0616142 0.8870079 270 N 33 2 J11-6
+TOP 6 5.9915355 0.9267717 270 N 0 9 J11-7
+TOP 7 6.0616142 0.9669292 270 N 0 10 J11-8
+TOP 8 6.0265748 0.506693 270 N 16 99 J11-M1
+TOP 9 6.0265748 1.1468504 270 N 16 100 J11-M2
+TOP 10 5.8915355 0.5767717 270 N 0 11 J11-M3
+TOP 11 5.8915355 1.0767717 270 N 0 12 J11-M4
+#
+# CMP 16
+CMP 2 5.8070866 -0.1771654 0 N C11 C0603C104K5RACTU ;0=1,1=0.0343
+PRP Case/Package '0603 (1608)'
+PRP Dielectric 'X7R'
+PRP ESR ''
+PRP Failure_Rate 'N/A'
+PRP Mount 'Surface Mount'
+PRP Pins '2'
+PRP Qualification 'Standard'
+PRP Rated_Voltage '50V'
+PRP RoHS 'Yes'
+PRP Termination_Finish '100% Matte Sn'
+PRP Tolerance '10%'
+PRP Type 'Ceramic'
+PRP Value '100nF'
+TOP 0 5.777559 -0.1771654 180 N 13 45 C11-1
+TOP 1 5.8366142 -0.1771654 0 N 24 33 C11-2
+#
+# CMP 17
+CMP 11 0.45 -1.7999961 90 N R1 TNPW060310K0BEEA ;0=1,1=0.0217
+PRP Case/Package '0603 (1608)'
+PRP Failure_Rate 'N/A'
+PRP Mount 'Surface Mount'
+PRP Pins '2'
+PRP Qualification 'Automotive'
+PRP Rated_Current ''
+PRP Rated_Power '100mW'
+PRP Rated_Voltage '75V'
+PRP RoHS 'Yes'
+PRP Termination_Finish 'Pure tin termination finish'
+PRP Tolerance '0.1%'
+PRP Type 'High Stability Thin Film'
+PRP Value '10k'
+TOP 0 0.45 -1.7694843 270 N 24 31 R1-1
+TOP 1 0.45 -1.8305079 90 N 16 98 R1-2
+#
+# CMP 18
+CMP 5 0 0.0000039 0 N MH1 EUROCARD_160X100 ;0=2,1=0.0000
+TOP 0 3.1496063 1.9094528 0 N 16 106 MH1-1
+TOP 1 3.1496063 -1.9094449 0 N 16 105 MH1-2
+#
+# CMP 19
+CMP 2 0.35 -1.8 270 N C3 C0603W102KDRACAUTO ;0=1,1=0.0343
+PRP Case/Package '0603 (1608)'
+PRP Dielectric 'X7R'
+PRP ESR ''
+PRP Failure_Rate 'N/A'
+PRP Mount 'SMD'
+PRP Pins '2'
+PRP Qualification 'Automotive'
+PRP Rated_Voltage '1kV'
+PRP RoHS 'Yes'
+PRP Termination_Finish '100% Matte Sn'
+PRP Tolerance '10%'
+PRP Type 'Ceramic'
+PRP Value '1nF'
+TOP 0 0.35 -1.8295276 90 N 16 97 C3-1
+TOP 1 0.35 -1.7704724 270 N 24 30 C3-2
+#
+# CMP 20
+CMP 6 5.7086614 -1.7519685 270 N FID10 FIDUCIAL ;0=1,1=0.3350
+TOP 0 5.7086614 -1.7519685 270 N 0 2 FID10-1
+#
+# CMP 21
+CMP 6 5.7086614 0.4330709 270 N FID12 FIDUCIAL ;0=1,1=0.3350
+TOP 0 5.7086614 0.4330709 270 N 0 1 FID12-1
+#
+# CMP 22
+CMP 6 0.4 -1.7 270 N FID11 FIDUCIAL ;0=1,1=0.3350
+TOP 0 0.4 -1.7 270 N 0 0 FID11-1
+#
+# CMP 23
+CMP 12 -0.2318897 0.0000039 0 N MP10 20817-443 ;0=2,1=0.7874
+TOP 0 0.1401575 1.7500039 0 N 16 102 MP10-M1
+TOP 1 0.1401575 -1.7499961 0 N 16 101 MP10-M2
+#
+# CMP 24
+CMP 1 5.8389764 -1.1499961 0 N L2 BLM21SP700SH1D ;0=1,1=0.0413
+PRP Case/Package '0805 (2012)'
+PRP Failure_Rate ''
+PRP Impedance '70'
+PRP Maximum_DC_Resistance '9m'
+PRP Qualification 'Automotive'
+PRP Rated_Current '6A'
+PRP Termination_Finish 'Tin'
+PRP Tolerance '25%'
+TOP 0 5.8049213 -1.1499961 180 N 19 5 L2-1
+TOP 1 5.8730315 -1.1499961 0 N 17 2 L2-2
+#
+# CMP 25
+CMP 1 5.8389764 -1.0499961 0 N L1 BLM21SP700SH1D ;0=1,1=0.0413
+PRP Case/Package '0805 (2012)'
+PRP Failure_Rate ''
+PRP Impedance '70'
+PRP Maximum_DC_Resistance '9m'
+PRP Qualification 'Automotive'
+PRP Rated_Current '6A'
+PRP Termination_Finish 'Tin'
+PRP Tolerance '25%'
+TOP 0 5.8049213 -1.0499961 180 N 13 34 L1-1
+TOP 1 5.8730315 -1.0499961 0 N 18 2 L1-2
+#
+# CMP 26
+CMP 3 5.8389764 -1.2499961 180 N C2 C0805C474K5RACTU ;0=1,1=0.0433
+PRP Case/Package '0805 (2012)'
+PRP Dielectric 'X7R'
+PRP ESR ''
+PRP Failure_Rate 'N/A'
+PRP Mount 'Surface Mount'
+PRP Pins '2'
+PRP Qualification 'Standard'
+PRP Rated_Voltage '50V'
+PRP RoHS 'Yes'
+PRP Termination_Finish '100% Matte Sn'
+PRP Tolerance '10%'
+PRP Type 'Ceramic'
+PRP Value '470nF'
+TOP 0 5.872441 -1.2499961 0 N 24 25 C2-1
+TOP 1 5.8055118 -1.2499961 180 N 19 4 C2-2
+#
+# CMP 27
+CMP 3 5.8389764 -0.9499961 180 N C1 C0805C474K5RACTU ;0=1,1=0.0433
+PRP Case/Package '0805 (2012)'
+PRP Dielectric 'X7R'
+PRP ESR ''
+PRP Failure_Rate 'N/A'
+PRP Mount 'Surface Mount'
+PRP Pins '2'
+PRP Qualification 'Standard'
+PRP Rated_Voltage '50V'
+PRP RoHS 'Yes'
+PRP Termination_Finish '100% Matte Sn'
+PRP Tolerance '10%'
+PRP Type 'Ceramic'
+PRP Value '470nF'
+TOP 0 5.872441 -0.9499961 0 N 24 24 C1-1
+TOP 1 5.8055118 -0.9499961 180 N 13 33 C1-2
+#
+# CMP 28
+CMP 7 6.3307087 -1.0999961 90 N P1 09241206921 ;0=2,1=0.3406
+PRP Connector_Type 'BOARD EURO CONNECTOR'
+PRP Contact_Plating ''
+PRP Contact_Resistance ''
+PRP Gender ''
+PRP Manufacturer_Series '09241206921'
+PRP Mount 'TH'
+PRP Orientation ''
+PRP Pins ''
+PRP Pitch ''
+PRP Qualification ''
+PRP Rated_Current ''
+PRP Rated_Voltage ''
+PRP RoHS 'Yes'
+PRP Termination_Finish ''
+TOP 0 6.0889764 -0.6499961 270 N 33 3 P1-A1
+TOP 1 6.0889764 -0.7499961 90 N 32 3 P1-A2
+TOP 2 6.0889764 -0.8499961 90 N 31 2 P1-A3
+TOP 3 6.0889764 -0.9499961 90 N 30 11 P1-A4
+TOP 4 6.0889764 -1.0499961 90 N 24 36 P1-A5
+TOP 5 6.0889764 -1.1499961 90 N 24 37 P1-A6
+TOP 6 6.0889764 -1.2499961 90 N 23 0 P1-A7
+TOP 7 6.0889764 -1.3499961 90 N 22 0 P1-A8
+TOP 8 6.0889764 -1.4499961 90 N 24 38 P1-A9
+TOP 9 6.0889764 -1.5499961 90 N 25 2 P1-A10
+TOP 10 5.9889764 -0.6499961 90 N 29 2 P1-B1
+TOP 11 5.9889764 -0.7499961 90 N 28 3 P1-B2
+TOP 12 5.9889764 -0.8499961 90 N 27 2 P1-B3
+TOP 13 5.9889764 -0.9499961 90 N 26 12 P1-B4
+TOP 14 5.9889764 -1.0499961 90 N 18 3 P1-B5
+TOP 15 5.9889764 -1.1499961 90 N 17 3 P1-B6
+TOP 16 5.9889764 -1.2499961 90 N 21 0 P1-B7
+TOP 17 5.9889764 -1.3499961 90 N 20 0 P1-B8
+TOP 18 5.9889764 -1.4499961 90 N 12 3 P1-B9
+TOP 19 5.9889764 -1.5499961 90 N 11 3 P1-B10
+TOP 20 6.1889764 -0.4499961 90 N 0 14 P1-M1
+TOP 21 6.1889764 -1.7499961 90 N 0 13 P1-M2
+#

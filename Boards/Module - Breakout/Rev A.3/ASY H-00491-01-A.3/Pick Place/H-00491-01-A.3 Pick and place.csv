@@ -1,0 +1,45 @@
+Altium Designer Pick and Place Locations
+C:\Users\Joris\AppData\Local\TempReleases\Snapshot\2\Assembly 01\Pick Place\H-00491-01-A.3 Pick and place.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       24-03-21
+Time:       10:04
+Revision:   Not in VersionControl
+Variant:    01
+Units used: mm
+
+"Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"MP11","5151094F","TopLayer","DIALIGHT_5151094F","7.6200","-34.5400","0","Optical Pipe"
+"G10","LOGO-HIBER","TopLayer","HIBER_LOGO_COPPER_55x40","-30.0000","-124.9999","90","Hiber Logo"
+"G11","HIBER-PARTNUMBER","TopLayer","HIBER_PNSN_COPPER","-30.0000","-124.9999","90","Hiber Fabrication Partnumber"
+"R13","CRCW06034K70FKEA","TopLayer","RESC160X85X55L30N","8.8900","-40.6400","270","RES Standard Thick Film 0603 4K70 ±1% 0,1W"
+"R12","CRCW06034K70FKEA","TopLayer","RESC160X85X55L30N","11.4300","-40.6400","270","RES Standard Thick Film 0603 4K70 ±1% 0,1W"
+"D11","SML-E12M8W","TopLayer","LEDC170X80X80L20_YELLOW","3.8120","-36.8217","90","LED Yellowish green Diffused 0603 SMD"
+"D10","SML-E12M8W","TopLayer","LEDC170X80X80L20_YELLOW","11.4300","-36.8300","90","LED Yellowish green Diffused 0603 SMD"
+"U10","MCP23008-E/SS","TopLayer","SOP20P65_720X780X200L75X30N","147.5000","0.0000","90","Parallel I/O Port, 8-Bit, 8 I/O, CMOS, PDSO20"
+"C10","C0603C104K5RACTU","TopLayer","CAPC160X80X87L35N","144.3000","7.0000","90","CAP Standard 0603 (1608) 100,0nF 50V X7R (Standard)"
+"L4","BLM21SP700SH1D","TopLayer","BEADC200X125X105L50N","148.3100","-39.3699","0","IND, Automotive, Chip Ferrite Bead, Power Lines, 0805, 70R, 6A"
+"L3","BLM21SP700SH1D","TopLayer","BEADC200X125X105L50N","148.3100","-36.8299","0","IND, Automotive, Chip Ferrite Bead, Power Lines, 0805, 70R, 6A"
+"C5","C0805C474K5RACTU","TopLayer","CAPC200X125X110L50N","148.3100","-41.9099","180","CAP Standard 0805 (2012) 470,0nF 50V X7R (Standard)"
+"C4","C0805C474K5RACTU","TopLayer","CAPC200X125X110L50N","148.3100","-34.2899","180","CAP Standard 0805 (2012) 470,0nF 50V X7R (Standard)"
+"J10","67643-3910","TopLayer","MOLEX_676433910","155.8850","38.5000","270","USB Connector, 4 Contact(s), Female, Right Angle, Solder Terminal, Locking, Receptacle"
+"U11","24AA025E64T-I/OT","TopLayer","SOT23-6P95_270X145L35X35","147.5000","7.0000","90","EEPROM, 256X8, Serial, CMOS, PDSO5"
+"R11","CRCW06034K70FKEA","TopLayer","RESC160X85X55L30N","151.5310","7.9500","180","RES Standard Thick Film 0603 4K70 ±1% 0,1W"
+"R10","CRCW06034K70FKEA","TopLayer","RESC160X85X55L30N","151.5310","6.0500","180","RES Standard Thick Film 0603 4K70 ±1% 0,1W"
+"J11","RJHSE5E80","TopLayer","AMPHENOLICC_RJHSE5E80","151.8050","21.0000","90","Modular Connectors / Ethernet Connectors High Speed RJ w/no LEDs or Shield"
+"C11","C0603C104K5RACTU","TopLayer","CAPC160X80X87L35N","147.5000","-4.5000","0","CAP Standard 0603 (1608) 100,0nF 50V X7R (Standard)"
+"R1","TNPW060310K0BEEA","TopLayer","RESC160X85X55L30N","11.4300","-45.7199","270","RES High Stability Thin Film 0603 10K0 ±0.1% 0,1W"
+"MH1","EUROCARD_160X100","TopLayer","EUROCARD_100X160","80.0000","0.0001","0","Eurocard board outline 100x160mm"
+"C3","C0603W102KDRACAUTO","TopLayer","CAPC160X80X87L35N","8.8900","-45.7200","90","CAP Automotive 0603 (1608) 1,0nF 1kV X7R (ArcShield with Flexible Termination)"
+"FID10","FIDUCIAL","TopLayer","FIDUCIAL_075X150","145.0000","-44.5000","90","Fiducial"
+"FID12","FIDUCIAL","TopLayer","FIDUCIAL_075X150","145.0000","11.0000","90","Fiducial"
+"FID11","FIDUCIAL","TopLayer","FIDUCIAL_075X150","10.1600","-43.1800","90","Fiducial"
+"MP10","20817-443","TopLayer","SCHROFF_20817443","3.5600","0.0001","0","SCHROFF         20817-443             MODULE, PLUG-IN, 3U, 4HP"
+"L2","BLM21SP700SH1D","TopLayer","BEADC200X125X105L50N","148.3100","-29.2099","360","IND, Automotive, Chip Ferrite Bead, Power Lines, 0805, 70R, 6A"
+"L1","BLM21SP700SH1D","TopLayer","BEADC200X125X105L50N","148.3100","-26.6699","0","IND, Automotive, Chip Ferrite Bead, Power Lines, 0805, 70R, 6A"
+"C2","C0805C474K5RACTU","TopLayer","CAPC200X125X110L50N","148.3100","-31.7499","180","CAP Standard 0805 (2012) 470,0nF 50V X7R (Standard)"
+"C1","C0805C474K5RACTU","TopLayer","CAPC200X125X110L50N","148.3100","-24.1299","180","CAP Standard 0805 (2012) 470,0nF 50V X7R (Standard)"
+"P1","09241206921","TopLayer","HARTING_09241206921","154.6600","-27.9399","270","Headers and Edge Type Connector"
+"PCB10","TITLE-BLOCK","TopLayer","TITLEBLOCK-A4","-30.0000","-124.9999","360","Title Block and PCB BOM Line Item"

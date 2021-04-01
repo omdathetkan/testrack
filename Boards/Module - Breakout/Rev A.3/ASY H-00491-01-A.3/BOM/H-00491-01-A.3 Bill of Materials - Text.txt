@@ -1,0 +1,18 @@
+Line #	Quantity	Designator	Name	Description	Manufacturer Part Number 1	Manufacturer 1
+
+"106"	"4"	"C1, C2, C4, C5"	"C0805C474K5RACTU"	"CAP Standard 0805 (2012) 470,0nF 50V X7R (Standard)"	"C0805C474K5RACTU"	"KEMET"
+"104"	"1"	"C3"	"C0603W102KDRACAUTO"	"CAP Automotive 0603 (1608) 1,0nF 1kV X7R (ArcShield with Flexible Termination)"	"C0603W102KDRACAUTO"	"KEMET"
+"105"	"2"	"C10, C11"	"C0603C104K5RACTU"	"CAP Standard 0603 (1608) 100,0nF 50V X7R (Standard)"	"C0603C104K5RACTU"	"KEMET"
+"113"	"2"	"D10, D11"	"SML-E12M8W"	"LED Yellowish green Diffused 0603 SMD"	"SML-E12M8WT86"	"Rohm"
+"109"	"1"	"J10"	"67643-3910"	"USB Connector, 4 Contact(s), Female, Right Angle, Solder Terminal, Locking, Receptacle"	"67643-3910"	"Molex"
+"108"	"1"	"J11"	"RJHSE5E80"	"Modular Connectors / Ethernet Connectors High Speed RJ w/no LEDs or Shield"	"RJHSE5E80"	"Amphenol Commercial"
+"110"	"4"	"L1, L2, L3, L4"	"BLM21SP700SH1D"	"IND, Automotive, Chip Ferrite Bead, Power Lines, 0805, 70R, 6A"	"BLM21SP700SH1D"	"Murata"
+"100"	"1"	"MH1"	"EUROCARD_160X100"	"Eurocard board outline 100x160mm"	""	""
+"102"	"1"	"MP10"	"20817-443"	"SCHROFF         20817-443             MODULE, PLUG-IN, 3U, 4HP"	"20817-443"	"Pentair Schroff"
+"101"	"1"	"MP11"	"5151094F"	"Optical Pipe"	"515-1094F"	"Dialight"
+"107"	"1"	"P1"	"09241206921"	"Headers and Edge Type Connector"	"09241206921"	"HARTING Technology"
+"103"	"1"	"PCB10"	"TITLE-BLOCK"	"Title Block and PCB BOM Line Item"	""	""
+"114"	"1"	"R1"	"TNPW060310K0BEEA"	"RES High Stability Thin Film 0603 10K0 ±0.1% 0,1W"	"TNPW060310K0BEEA"	"Vishay Dale"
+"115"	"4"	"R10, R11, R12, R13"	"CRCW06034K70FKEA"	"RES Standard Thick Film 0603 4K70 ±1% 0,1W"	"CRCW06034K70FKEA"	"Vishay"
+"112"	"1"	"U10"	"MCP23008-E/SS"	"Parallel I/O Port, 8-Bit, 8 I/O, CMOS, PDSO20"	"MCP23008-E/SS"	"Microchip"
+"111"	"1"	"U11"	"24AA025E64T-I/OT"	"EEPROM, 256X8, Serial, CMOS, PDSO5"	"24AA025E64T-I/OT"	"Microchip"

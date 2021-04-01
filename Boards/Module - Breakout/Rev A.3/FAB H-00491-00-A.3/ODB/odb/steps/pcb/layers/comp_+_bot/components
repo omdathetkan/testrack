@@ -1,0 +1,11 @@
+#
+#Component attribute names
+#
+@0 .comp_mount_type
+@1 .comp_height
+
+# CMP 0
+CMP 10 6.0889765 -1.5018479 90 N NT1 NET-TIE ;0=1,1=0.3350
+TOP 0 6.0889765 -1.4939739 180 N 24 23 NT1-1
+TOP 1 6.0889765 -1.5097219 180 N 25 1 NT1-2
+#
