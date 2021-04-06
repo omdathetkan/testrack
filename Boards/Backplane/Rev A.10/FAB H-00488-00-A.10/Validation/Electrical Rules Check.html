@@ -1,0 +1,1457 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+        td, th {
+            padding: 0.5em;
+            text-align : left;
+        }
+        th {
+            background-color : #EEEEEE;
+        
+        }
+        th.column1, td.column1 {
+            width : 10em;
+        }
+
+        th.column2, td.column2 {
+            width : 30em;
+        }
+
+        table {
+            width : 100%;
+            font-size: 0.9em;
+        }
+
+		.header_holder {
+			Width = 100%;
+			border = 0px solid green;
+			padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+        }
+
+        .front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+        }
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+        .total_column1, .total_column {
+            font-weight : bold;
+        }
+        .total_column1 {
+            text-align : left;
+        }
+        .warning, .error {
+            color : red;
+            font-weight : bold;
+        }
+        tr.onmouseout_odd {
+            background-color : #white;
+        }
+        tr.onmouseout_even { 
+            background-color : #FAFAFA;
+        }
+        tr.onmouseover_odd, tr.onmouseover_even { 
+            background-color : #EEEEEE;
+        } 
+        a:link, a:visited, .q a:link,.q a:active,.q {
+            color: #21489e; 
+        }
+        a:link.callback, a:visited.callback { 
+            color: #21489e;
+        }
+        p.contents_level1 {
+            font-weight : bold;
+            font-size : 110%;
+            margin : 0.5em;
+        }
+        p.contents_level2 {
+            position : relative;
+            left : 20px;
+            margin : 0.5em;
+        }
+    </style><script type="text/javascript">
+        function coordToMils(coord) {
+            var number = coord / 10000;
+            
+            if (number != number.toFixed(3))
+                number = number.toFixed(3);
+            
+            return number + 'mil'
+        }
+
+        function coordToMM(coord) {
+            var number = 0.0254 * coord / 10000;
+            
+            if (number != number.toFixed(4))
+                number = number.toFixed(4);
+            
+            return number + 'mm'
+        }
+    
+        function convertCoord(coordNode, units) {
+            for (var i = 0; i < coordNode.childNodes.length; i++) {
+                coordNode.removeChild(coordNode.childNodes[i]);
+            }
+
+            var coord = coordNode.getAttribute('value');
+            if (coord != null) {
+                if (units == 'mm') {
+                    textNode = document.createTextNode(coordToMM(coord));
+                    coordNode.appendChild(textNode);
+                } else if (units == 'mil') {
+                    textNode = document.createTextNode(coordToMils(coord));
+                    coordNode.appendChild(textNode);
+                }
+            }
+        }
+    
+        function convertUnits(unitNode, units) {
+            for (var i = 0; i < unitNode.childNodes.length; i++) {
+                unitNode.removeChild(unitNode.childNodes[i]);
+            }
+        
+            textNode = document.createTextNode(units); 
+            unitNode.appendChild(textNode);
+        }
+    
+        function changeUnits(radio_input, units) {
+            if (radio_input.checked) {
+            
+                var elements = document.getElementsByName('coordinate');
+                if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                        convertCoord(elements[i], units);
+                    }
+                }
+    
+                var elements = document.getElementsByName('units');
+                if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                        convertUnits(elements[i], units);
+                    }
+                }
+            }
+        }
+    </script></head>
+<body onload=""><img ALT="Altium" src="
+            file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+        "><h1>Electrical Rule Check Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">1-2-2021</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">20:55:06</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Joris\AppData\Local\TempReleases\Snapshot\1\Fabrication\Validation\Electrical Rules Check.html" class="file"><acronym title="C:\Users\Joris\AppData\Local\TempReleases\Snapshot\1\Fabrication\Validation\Electrical Rules Check.html">C:\Users\Joris\AppData\Local\TempReleases\Snapshot\1\Fabrication\Validation\Electrical Rules Check.html</acronym></a></td>
+</tr>
+</table><a name="IDAUDZROMA2VKOPHTCZAIQWGZEHGIG14JQR2DX1UCJBCDRTDRJNTGF"><table>
+<tr>
+<th class="column1">Class</th>
+<th class="column2">Document</th>
+<th class="column3">Message</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net NetNT125_2_1 has only one pin (Pin NT125-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net NetNT125_3_1 has only one pin (Pin NT125-1)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net NetNT126_1_1 has only one pin (Pin NT126-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net NetNT126_2_1 has only one pin (Pin NT126-1)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net NetNT126_6_1 has only one pin (Pin NT126-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net NetU100_96 contains floating input pins (Pin U100-96)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net NetU100_97 contains floating input pins (Pin U100-97)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net NetU100_98 contains floating input pins (Pin U100-98)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net NetU100_99 contains floating input pins (Pin U100-99)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net NetU100_100 contains floating input pins (Pin U100-100)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net NetU100_101 contains floating input pins (Pin U100-101)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net NetU109_18 contains floating input pins (Pin U109-18)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net NetU109_23 contains floating input pins (Pin U109-23)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net NetU115_18 contains floating input pins (Pin U115-18)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_EN_2P1 has only one pin (Pin U113-9)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_EN_3P3 has only one pin (Pin U111-9)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_LM_VCC has only one pin (Pin U115-9)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">NetC162_2 contains Power Pin and Output Port objects (Pin U111-2, Pin U113-2, Port V_24P0).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">NetC166_1 contains Power Pin and Output Port objects (Pin U111-3, Port V_3P3).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">NetC168_1 contains Power Pin and Output Port objects (Pin U113-3, Port V_2P1).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetD111_1_5 contains Power Pin and Input Port objects (Pin U102-30, Port 5V).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetD111_2_5 contains Power Pin and Input Port objects (Pin U102-30, Port 5V).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetD111_3_5 contains Power Pin and Input Port objects (Pin U102-30, Port 5V).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetD111_4_5 contains Power Pin and Input Port objects (Pin U102-30, Port 5V).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetD111_5_5 contains Power Pin and Input Port objects (Pin U102-30, Port 5V).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetD111_6_5 contains Power Pin and Input Port objects (Pin U102-30, Port 5V).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetD111_7_5 contains Power Pin and Input Port objects (Pin U102-30, Port 5V).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Connectors.SchDoc</td>
+<td class="column3">NetJ110_1 contains Power Pin and Output Port objects (Pin J110-1, Port V_IN1_24P0).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetR142_1_2 contains Power Pin and Input Port objects (Pin U102-11, Port 24V).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetR142_2_2 contains Power Pin and Input Port objects (Pin U102-11, Port 24V).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetR142_3_2 contains Power Pin and Input Port objects (Pin U102-11, Port 24V).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetR142_4_2 contains Power Pin and Input Port objects (Pin U102-11, Port 24V).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetR142_5_2 contains Power Pin and Input Port objects (Pin U102-11, Port 24V).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetR142_6_2 contains Power Pin and Input Port objects (Pin U102-11, Port 24V).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">NetR142_7_2 contains Power Pin and Input Port objects (Pin U102-11, Port 24V).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - I2C Mux.SchDoc</td>
+<td class="column3">V_3P3 contains Power Pin and Input Port objects (Pin U108-21, Port V_3P3).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - I2C Address.SchDoc</td>
+<td class="column3">V_5P0 contains Power Pin and Input Port objects (Pin U117-8, Port V_5P0).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">V_INTVCC_3P3_1 contains Power Pin and Output Port objects (Pin U102-3, Pin U103-5, Port INTVCC).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">V_INTVCC_3P3_2 contains Power Pin and Output Port objects (Pin U102-3, Pin U103-5, Port INTVCC).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">V_INTVCC_3P3_3 contains Power Pin and Output Port objects (Pin U102-3, Pin U103-5, Port INTVCC).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">V_INTVCC_3P3_4 contains Power Pin and Output Port objects (Pin U102-3, Pin U103-5, Port INTVCC).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">V_INTVCC_3P3_5 contains Power Pin and Output Port objects (Pin U102-3, Pin U103-5, Port INTVCC).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">V_INTVCC_3P3_6 contains Power Pin and Output Port objects (Pin U102-3, Pin U103-5, Port INTVCC).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">V_INTVCC_3P3_7 contains Power Pin and Output Port objects (Pin U102-3, Pin U103-5, Port INTVCC).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">GND contains Input Pin and Unspecified Port objects (Pin U100-68, Pin U100-69, Pin U100-70, Pin U100-71, Pin U100-162, Pin U100-163, Pin U100-168, Pin U100-169, Pin U100-190, Pin U100-191, Pin U100-192, Pin U100-193, Pin U101-4, Pin U101-5, Port GND).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - USB Hub.SchDoc</td>
+<td class="column3">GND contains Input Pin and Unspecified Port objects (Pin U105-4, Pin U105-5, Port GND).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot Master.SchDoc</td>
+<td class="column3">GND contains Input Pin and Unspecified Port objects (Pin U106-10, Pin U107-10, Port GND).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - I2C Mux.SchDoc</td>
+<td class="column3">GND contains Input Pin and Unspecified Port objects (Pin U108-18, Port GND).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">GND contains Input Pin and Unspecified Port objects (Pin U115-19, Port GND).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">GND contains Input Sheet Entry and Unspecified Sheet Entry objects (Sheet Entry SLOT4-A0(Input), Sheet Entry SLOT4-A1(Input), Sheet Entry SLOT6-A1(Input), Sheet Entry SLOT7-A1(Input), Sheet Entry ADDR-GND(Passive), Sheet Entry CONNECTORS-GND(Passive), Sheet Entry DOWNSTREAM-GND(Passive), Sheet Entry I2C-GND(Passive), Sheet Entry LAN-GND(Passive), Sheet Entry MASTER-GND(Passive), Sheet Entry POWER-GND(Passive), Sheet Entry SLOT1-GND(Passive), Sheet Entry SLOT2-GND(Passive), Sheet Entry SLOT3-GND(Passive), Sheet Entry SLOT4-GND(Passive), Sheet Entry SLOT5-GND(Passive), Sheet Entry SLOT6-GND(Passive), Sheet Entry SLOT7-GND(Passive), Sheet Entry UPSTREAM-GND(Passive), Sheet Entry USB-GND(Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Connectors Upstream.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness I2C_BACKPLANE, I2C_MASTER</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR0_1 has no driving source (Pin NT126-2, Pin U102-5)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR0_2 has no driving source (Pin NT126-2, Pin U102-5)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR0_3 has no driving source (Pin NT126-2, Pin U102-5)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR0_4 has no driving source (Pin NT126-2, Pin U102-5)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR0_5 has no driving source (Pin NT126-2, Pin U102-5)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR0_6 has no driving source (Pin NT126-2, Pin U102-5)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR0_7 has no driving source (Pin NT126-2, Pin U102-5)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR1_1 has no driving source (Pin NT125-2, Pin U102-6)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR1_2 has no driving source (Pin NT125-2, Pin U102-6)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR1_3 has no driving source (Pin NT125-2, Pin U102-6)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR1_4 has no driving source (Pin NT125-2, Pin U102-6)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR1_5 has no driving source (Pin NT125-2, Pin U102-6)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR1_6 has no driving source (Pin NT125-2, Pin U102-6)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ADR1_7 has no driving source (Pin NT125-2, Pin U102-6)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net CONFIG_1 has no driving source (Pin NT124-2, Pin U102-2)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net CONFIG_2 has no driving source (Pin NT124-2, Pin U102-2)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net CONFIG_3 has no driving source (Pin NT124-2, Pin U102-2)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net CONFIG_4 has no driving source (Pin NT124-2, Pin U102-2)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net CONFIG_5 has no driving source (Pin NT124-2, Pin U102-2)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net CONFIG_6 has no driving source (Pin NT124-2, Pin U102-2)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net CONFIG_7 has no driving source (Pin NT124-2, Pin U102-2)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - I2C Address.SchDoc</td>
+<td class="column3">Net DS_REF has no driving source (Pin R199-1, Pin R200-2, Pin U117-6)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net EN_1 has no driving source (Pin R145-1, Pin U102-17, Pin U102-24)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net EN_2 has no driving source (Pin R145-1, Pin U102-17, Pin U102-24)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net EN_3 has no driving source (Pin R145-1, Pin U102-17, Pin U102-24)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net EN_4 has no driving source (Pin R145-1, Pin U102-17, Pin U102-24)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net EN_5 has no driving source (Pin R145-1, Pin U102-17, Pin U102-24)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net EN_6 has no driving source (Pin R145-1, Pin U102-17, Pin U102-24)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net EN_7 has no driving source (Pin R145-1, Pin U102-17, Pin U102-24)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot Master.SchDoc</td>
+<td class="column3">Net ENABLE has no driving source (Pin C157-1, Pin R172-2, Pin U106-2, Pin U107-2)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB1_1 has no driving source (Pin R140-2, Pin R141-1, Pin U102-26)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB1_2 has no driving source (Pin R140-2, Pin R141-1, Pin U102-26)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB1_3 has no driving source (Pin R140-2, Pin R141-1, Pin U102-26)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB1_4 has no driving source (Pin R140-2, Pin R141-1, Pin U102-26)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB1_5 has no driving source (Pin R140-2, Pin R141-1, Pin U102-26)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB1_6 has no driving source (Pin R140-2, Pin R141-1, Pin U102-26)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB1_7 has no driving source (Pin R140-2, Pin R141-1, Pin U102-26)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB2_1 has no driving source (Pin R143-2, Pin R144-1, Pin U102-15)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB2_2 has no driving source (Pin R143-2, Pin R144-1, Pin U102-15)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB2_3 has no driving source (Pin R143-2, Pin R144-1, Pin U102-15)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB2_4 has no driving source (Pin R143-2, Pin R144-1, Pin U102-15)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB2_5 has no driving source (Pin R143-2, Pin R144-1, Pin U102-15)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB2_6 has no driving source (Pin R143-2, Pin R144-1, Pin U102-15)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net FB2_7 has no driving source (Pin R143-2, Pin R144-1, Pin U102-15)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net I2C0.RESET has no driving source (Pin C158-1, Pin D108-6, Pin D116-4, Pin R133-1, Pin R164-1, Pin R171-2, Pin U108-24)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net I2C.ID-DN has no driving source (Pin D116-6, Pin R196-2, Pin U117-3)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net I2C.ID-UP has no driving source (Pin D108-4, Pin R198-1, Pin U117-5)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN1.RX_N has no driving source (Pin C138-1, Pin R138-1, Pin U100-197)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN1.RX_P has no driving source (Pin C137-1, Pin R137-1, Pin U100-196)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN2.RX_N has no driving source (Pin C138-1, Pin R138-1, Pin U100-207)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN2.RX_P has no driving source (Pin C137-1, Pin R137-1, Pin U100-206)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN3.RX_N has no driving source (Pin C138-1, Pin R138-1, Pin U100-6)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN3.RX_P has no driving source (Pin C137-1, Pin R137-1, Pin U100-5)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN4.RX_N has no driving source (Pin C138-1, Pin R138-1, Pin U100-23)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN4.RX_P has no driving source (Pin C137-1, Pin R137-1, Pin U100-22)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN5.RX_N has no driving source (Pin C138-1, Pin R138-1, Pin U100-31)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN5.RX_P has no driving source (Pin C137-1, Pin R137-1, Pin U100-30)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN6.RX_N has no driving source (Pin C138-1, Pin R138-1, Pin U100-48)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN6.RX_P has no driving source (Pin C137-1, Pin R137-1, Pin U100-47)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN7.RX_N has no driving source (Pin C138-1, Pin R138-1, Pin U100-55)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN7.RX_P has no driving source (Pin C137-1, Pin R137-1, Pin U100-54)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN8.RX_N has no driving source (Pin J108-6, Pin U100-65)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Net LAN8.RX_P has no driving source (Pin J108-4, Pin U100-64)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net LAN_AUTOMDIX has no driving source (Pin R104-2, Pin U100-87)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net LAN_BIST has no driving source (Pin NT101-2, Pin U100-109)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net LAN_EN1P has no driving source (Pin NT111-2, Pin U100-91)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net LAN_IO_SWM has no driving source (Pin NT100-2, Pin U100-156)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net LAN_MODESEL0 has no driving source (Pin NT117-2, Pin U100-167)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net LAN_MODESEL1 has no driving source (Pin NT116-2, Pin U100-166)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net LAN_MODESEL2 has no driving source (Pin NT115-2, Pin U100-165)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net LAN_MODESEL3 has no driving source (Pin NT114-2, Pin U100-164)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net LAN_PRSV has no driving source (Pin NT109-2, Pin U100-170)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net LAN_RLPBK has no driving source (Pin NT102-2, Pin U100-82)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net LAN_RST has no driving source (Pin C132-1, Pin R114-2, Pin R133-2, Pin U100-110)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net LAN_X1 has no driving source (Pin C133-1, Pin R130-1, Pin U100-176, Pin Y100-1)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net NetR182_2 has no driving source (Pin R182-2, Pin R184-1, Pin U111-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net NetR186_2 has no driving source (Pin R186-2, Pin R187-1, Pin U113-1)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net NetU100_96 has no driving source (Pin U100-96)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net NetU100_97 has no driving source (Pin U100-97)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net NetU100_98 has no driving source (Pin U100-98)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net NetU100_99 has no driving source (Pin U100-99)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net NetU100_100 has no driving source (Pin U100-100)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Net NetU100_101 has no driving source (Pin U100-101)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net NetU109_18 has no driving source (Pin U109-18)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net NetU109_23 has no driving source (Pin U109-23)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net NetU115_18 has no driving source (Pin U115-18)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ON_1 has no driving source (Pin NT122-2, Pin U102-22)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ON_2 has no driving source (Pin NT122-2, Pin U102-22)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ON_3 has no driving source (Pin NT122-2, Pin U102-22)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ON_4 has no driving source (Pin NT122-2, Pin U102-22)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ON_5 has no driving source (Pin NT122-2, Pin U102-22)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ON_6 has no driving source (Pin NT122-2, Pin U102-22)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net ON_7 has no driving source (Pin NT122-2, Pin U102-22)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV1_1 has no driving source (Pin NT119-2, Pin U102-32)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV1_2 has no driving source (Pin NT119-2, Pin U102-32)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV1_3 has no driving source (Pin NT119-2, Pin U102-32)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV1_4 has no driving source (Pin NT119-2, Pin U102-32)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV1_5 has no driving source (Pin NT119-2, Pin U102-32)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV1_6 has no driving source (Pin NT119-2, Pin U102-32)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV1_7 has no driving source (Pin NT119-2, Pin U102-32)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV2_1 has no driving source (Pin NT121-2, Pin U102-9)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV2_2 has no driving source (Pin NT121-2, Pin U102-9)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV2_3 has no driving source (Pin NT121-2, Pin U102-9)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV2_4 has no driving source (Pin NT121-2, Pin U102-9)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV2_5 has no driving source (Pin NT121-2, Pin U102-9)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV2_6 has no driving source (Pin NT121-2, Pin U102-9)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net OV2_7 has no driving source (Pin NT121-2, Pin U102-9)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_ADR0 has no driving source (Pin NT137-2, Pin U109-5)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_ADR1 has no driving source (Pin NT136-2, Pin U109-6)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_CONFIG has no driving source (Pin NT135-2, Pin U109-2)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_EN1 has no driving source (Pin NT132-1, Pin U109-24)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_EN2 has no driving source (Pin NT134-1, Pin U109-17)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_EN_2P1 has no driving source (Pin U113-9)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_EN_3P3 has no driving source (Pin U111-9)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_FB1 has no driving source (Pin R177-2, Pin R180-1, Pin U109-26)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_FB2 has no driving source (Pin R189-2, Pin R190-1, Pin U109-15)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_ON has no driving source (Pin NT131-2, Pin U109-22)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_OV1 has no driving source (Pin R179-2, Pin R181-1, Pin U109-32)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_OV2 has no driving source (Pin NT130-2, Pin U109-9)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_SENSE1 has no driving source (Pin Q102-1, Pin Q102-2, Pin Q102-5, Pin Q102-6, Pin Q102-7, Pin R175-1, Pin U109-29)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_SENSE2 has no driving source (Pin Q106-1, Pin Q106-2, Pin Q106-5, Pin Q106-6, Pin Q106-7, Pin R188-1, Pin U109-12)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_SS has no driving source (Pin C173-1, Pin U109-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_TIMER has no driving source (Pin NT133-2, Pin U109-8)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_UV1 has no driving source (Pin R176-2, Pin R179-1, Pin U109-31)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Net PWR_UV2 has no driving source (Pin NT129-2, Pin U109-10)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE1_1 has no driving source (Pin Q100-1, Pin Q100-2, Pin Q100-5, Pin Q100-6, Pin Q100-7, Pin R139-1, Pin U102-29)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE1_2 has no driving source (Pin Q100-1, Pin Q100-2, Pin Q100-5, Pin Q100-6, Pin Q100-7, Pin R139-1, Pin U102-29)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE1_3 has no driving source (Pin Q100-1, Pin Q100-2, Pin Q100-5, Pin Q100-6, Pin Q100-7, Pin R139-1, Pin U102-29)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE1_4 has no driving source (Pin Q100-1, Pin Q100-2, Pin Q100-5, Pin Q100-6, Pin Q100-7, Pin R139-1, Pin U102-29)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE1_5 has no driving source (Pin Q100-1, Pin Q100-2, Pin Q100-5, Pin Q100-6, Pin Q100-7, Pin R139-1, Pin U102-29)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE1_6 has no driving source (Pin Q100-1, Pin Q100-2, Pin Q100-5, Pin Q100-6, Pin Q100-7, Pin R139-1, Pin U102-29)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE1_7 has no driving source (Pin Q100-1, Pin Q100-2, Pin Q100-5, Pin Q100-6, Pin Q100-7, Pin R139-1, Pin U102-29)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE2_1 has no driving source (Pin Q101-1, Pin Q101-2, Pin Q101-5, Pin Q101-6, Pin Q101-7, Pin R142-1, Pin U102-12)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE2_2 has no driving source (Pin Q101-1, Pin Q101-2, Pin Q101-5, Pin Q101-6, Pin Q101-7, Pin R142-1, Pin U102-12)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE2_3 has no driving source (Pin Q101-1, Pin Q101-2, Pin Q101-5, Pin Q101-6, Pin Q101-7, Pin R142-1, Pin U102-12)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE2_4 has no driving source (Pin Q101-1, Pin Q101-2, Pin Q101-5, Pin Q101-6, Pin Q101-7, Pin R142-1, Pin U102-12)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE2_5 has no driving source (Pin Q101-1, Pin Q101-2, Pin Q101-5, Pin Q101-6, Pin Q101-7, Pin R142-1, Pin U102-12)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE2_6 has no driving source (Pin Q101-1, Pin Q101-2, Pin Q101-5, Pin Q101-6, Pin Q101-7, Pin R142-1, Pin U102-12)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SENSE2_7 has no driving source (Pin Q101-1, Pin Q101-2, Pin Q101-5, Pin Q101-6, Pin Q101-7, Pin R142-1, Pin U102-12)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SS_1 has no driving source (Pin C141-1, Pin U102-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SS_2 has no driving source (Pin C141-1, Pin U102-1)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SS_3 has no driving source (Pin C141-1, Pin U102-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SS_4 has no driving source (Pin C141-1, Pin U102-1)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SS_5 has no driving source (Pin C141-1, Pin U102-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SS_6 has no driving source (Pin C141-1, Pin U102-1)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net SS_7 has no driving source (Pin C141-1, Pin U102-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net TIMER_1 has no driving source (Pin NT123-2, Pin U102-8)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net TIMER_2 has no driving source (Pin NT123-2, Pin U102-8)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net TIMER_3 has no driving source (Pin NT123-2, Pin U102-8)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net TIMER_4 has no driving source (Pin NT123-2, Pin U102-8)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net TIMER_5 has no driving source (Pin NT123-2, Pin U102-8)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net TIMER_6 has no driving source (Pin NT123-2, Pin U102-8)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net TIMER_7 has no driving source (Pin NT123-2, Pin U102-8)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - I2C Address.SchDoc</td>
+<td class="column3">Net US_REF has no driving source (Pin R195-1, Pin R197-2, Pin U117-2)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - USB Hub.SchDoc</td>
+<td class="column3">Net USB_RESET has no driving source (Pin C154-1, Pin R161-2, Pin R164-2, Pin U104-43)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - USB Hub.SchDoc</td>
+<td class="column3">Net USB_SUSP has no driving source (Pin R160-2, Pin U104-45)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - USB Hub.SchDoc</td>
+<td class="column3">Net USB_XTAL1 has no driving source (Pin C155-1, Pin R165-1, Pin U104-61, Pin Y101-3)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV1_1 has no driving source (Pin NT118-2, Pin U102-31)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV1_2 has no driving source (Pin NT118-2, Pin U102-31)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV1_3 has no driving source (Pin NT118-2, Pin U102-31)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV1_4 has no driving source (Pin NT118-2, Pin U102-31)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV1_5 has no driving source (Pin NT118-2, Pin U102-31)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV1_6 has no driving source (Pin NT118-2, Pin U102-31)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV1_7 has no driving source (Pin NT118-2, Pin U102-31)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV2_1 has no driving source (Pin NT120-2, Pin U102-10)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV2_2 has no driving source (Pin NT120-2, Pin U102-10)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV2_3 has no driving source (Pin NT120-2, Pin U102-10)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV2_4 has no driving source (Pin NT120-2, Pin U102-10)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV2_5 has no driving source (Pin NT120-2, Pin U102-10)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV2_6 has no driving source (Pin NT120-2, Pin U102-10)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net UV2_7 has no driving source (Pin NT120-2, Pin U102-10)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_5P0_1 has no driving source (Pin J103-B5, Pin Q100-4, Pin Q100-8, Pin R140-1, Pin U102-27)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_5P0_2 has no driving source (Pin J103-B5, Pin Q100-4, Pin Q100-8, Pin R140-1, Pin U102-27)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_5P0_3 has no driving source (Pin J103-B5, Pin Q100-4, Pin Q100-8, Pin R140-1, Pin U102-27)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_5P0_4 has no driving source (Pin J103-B5, Pin Q100-4, Pin Q100-8, Pin R140-1, Pin U102-27)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_5P0_5 has no driving source (Pin J103-B5, Pin Q100-4, Pin Q100-8, Pin R140-1, Pin U102-27)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_5P0_6 has no driving source (Pin J103-B5, Pin Q100-4, Pin Q100-8, Pin R140-1, Pin U102-27)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_5P0_7 has no driving source (Pin J103-B5, Pin Q100-4, Pin Q100-8, Pin R140-1, Pin U102-27)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_24P0_1 has no driving source (Pin J103-B6, Pin Q101-4, Pin Q101-8, Pin R143-1, Pin U102-14)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_24P0_2 has no driving source (Pin J103-B6, Pin Q101-4, Pin Q101-8, Pin R143-1, Pin U102-14)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_24P0_3 has no driving source (Pin J103-B6, Pin Q101-4, Pin Q101-8, Pin R143-1, Pin U102-14)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_24P0_4 has no driving source (Pin J103-B6, Pin Q101-4, Pin Q101-8, Pin R143-1, Pin U102-14)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_24P0_5 has no driving source (Pin J103-B6, Pin Q101-4, Pin Q101-8, Pin R143-1, Pin U102-14)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_24P0_6 has no driving source (Pin J103-B6, Pin Q101-4, Pin Q101-8, Pin R143-1, Pin U102-14)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Card Slot.SchDoc</td>
+<td class="column3">Net V_OUT_24P0_7 has no driving source (Pin J103-B6, Pin Q101-4, Pin Q101-8, Pin R143-1, Pin U102-14)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Nets Wire I2C0.A0 has multiple names (Net Label I2C0.A0, Net Label I2C0.A0, Net Label I2C0.A0, Net Label I2C0.A0, Net Label I2C0.A0, Net Label I2C0.A0, Net Label I2C0.A0, Net Label I2C0.A0, Net Label I2C0.A0, Net Label I2C0.A0, Net Label I2C0.A0, Net Label I2CM.A0)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Nets Wire I2C0.A1 has multiple names (Net Label I2C0.A1, Net Label I2C0.A1, Net Label I2C0.A1, Net Label I2C0.A1, Net Label I2C0.A1, Net Label I2C0.A1, Net Label I2C0.A1, Net Label I2C0.A1, Net Label I2C0.A1, Net Label I2C0.A1, Net Label I2C0.A1, Net Label I2CM.A1)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Nets Wire I2C0.RESET has multiple names (Net Label I2C0.RESET, Net Label I2C0.RESET, Net Label I2C0.RESET, Net Label I2C0.RESET, Net Label I2C0.RESET, Net Label I2C0.RESET, Net Label I2C0.RESET, Net Label I2C0.RESET, Net Label I2C0.RESET, Net Label I2C0.RESET, Net Label I2C0.RESET, Net Label I2C.RESET, Net Label I2CM.RESET)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Nets Wire I2C.SCL has multiple names (Net Label I2C.SCL, Net Label I2CM.SCL)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Top.SchDoc</td>
+<td class="column3">Nets Wire I2C.SDA has multiple names (Net Label I2C.SDA, Net Label I2CM.SDA)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Off grid Net Label PWR_PGOOD_24V_R at 4313.016mil,3100mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Unconnected Pin U100-96 at 11600mil,4600mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Unconnected Pin U100-97 at 11600mil,4200mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Unconnected Pin U100-98 at 11600mil,4300mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Unconnected Pin U100-99 at 11600mil,4400mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Unconnected Pin U100-100 at 11600mil,4500mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Ethernet Switch.SchDoc</td>
+<td class="column3">Unconnected Pin U100-101 at 11600mil,4700mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Unconnected Pin U109-18 at 5300mil,1800mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Unconnected Pin U109-23 at 5300mil,1900mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">H-00488 - Power.SchDoc</td>
+<td class="column3">Unconnected Pin U115-18 at 7600mil,3500mil</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
