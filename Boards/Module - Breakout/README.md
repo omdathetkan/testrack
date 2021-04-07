@@ -19,7 +19,7 @@ To install a board:
 
 ![Close-up of spacer soldered to board](./Documentation/mounting-2.jpeg)
 
-![Picture of board mounted on spacers](./Documentation/mounting-3.jpeg)
+![Picture of board mounted on spacers](./Documentation/mounting-3.jpeggit)
 
 
 
@@ -40,3 +40,4 @@ First Release
 ### Known Issues
 - Missing Pin-1 Indicator on U10
 - Increase solder mask sliver between ESD Cap/Res
+- USB D+/D- Swapped
